@@ -5,8 +5,9 @@ import random
 import numpy as np
 from gtts import gTTS
 from music21 import note, stream, tempo, midi
-from pydub import AudioSegment
+from pydub import from moviepy import ImageClip, AudioFileClip, VideoFileClip
 
+from moviepy import ImageClip, AudioFileClip, VideoFileClip
 
 import io
 
