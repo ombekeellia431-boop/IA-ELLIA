@@ -3,3 +3,5 @@ music21
 gTTS
 requests
 pydub
+numpy
+moviepy
