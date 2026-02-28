@@ -32,7 +32,39 @@ if file_to_split:
 
 
 
-        
+        # --- 1. Lecture de l'audio ---
+    st.audio(file_to_split)
+    
+    # --- 2. Traitement IA (Simulation pour l'instant) ---
+    with st.spinner("Extraction des paroles en cours..."):
+        # C'est ici que vous connecterez votre modèle plus tard
+        paroles_ia = "Les paroles extraites s'afficheront ici. Vous pourrez les modifier avant de les télécharger."
+
+    st.markdown("---") # Une ligne de séparation visuelle
+
+    # --- 3. Affichage et Téléchargement ---
+    # Création de deux colonnes : une large pour le texte, une petite pour le bouton
+    col_gauche, col_droite = st.columns([3, 1])
+
+    with col_gauche:
+        # Zone éditable pour l'utilisateur
+        texte_final = st.text_area(
+            label="Paroles détectées :", 
+            value=paroles_ia, 
+            height=250
+        )
+
+    with col_droite:
+        st.write("Options")
+        # Le bouton de téléchargement
+        st.download_button(
+            label="📥 Télécharger .txt",
+            data=texte_final,
+            file_name=f"paroles_{file_to_split.name}.txt",
+            mime="text/plain",
+            use_container_width=True
+        )
+    
         with st.spinner("Analyse et extraction..."):
             # Technique d'inversion de phase (légère pour le serveur)
             sound = AudioSegment.from_file(file_to_split)
