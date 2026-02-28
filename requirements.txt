@@ -4,4 +4,4 @@ gTTS
 requests
 pydub
 numpy
-moviepy
+moviepy 2.0
