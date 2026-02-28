@@ -27,11 +27,6 @@ path_paroles_extraites = "paroles_extraites.mp3"
 if file_to_split:
     st.audio(file_to_split)
     if st.button("🚀 Extraire les paroles maintenant"):
-
-
-
-
-
         # --- 1. Lecture de l'audio ---
     st.audio(file_to_split)
     
@@ -51,9 +46,7 @@ if file_to_split:
         texte_final = st.text_area(
             label="Paroles détectées :", 
             value=paroles_ia, 
-            height=250
-        )
-
+            height=250)
     with col_droite:
         st.write("Options")
         # Le bouton de téléchargement
