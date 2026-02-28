@@ -6,7 +6,12 @@ import numpy as np
 from gtts import gTTS
 from music21 import note, stream, tempo, midi
 from pydub import AudioSegment
-from moviepy.editor import ImageClip, AudiofileClip,VideofileClip
+
+
+
+
+
+
 import io
 # --- CONFIGURATION DU STUDIO ---
 st.set_page_config(page_title="ELLI-IA Studio Pro", layout="wide")
