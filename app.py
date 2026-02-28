@@ -6,7 +6,7 @@ import numpy as np
 from gtts import gTTS
 from music21 import note, stream, tempo, midi
 from pydub import AudioSegment
-from moviepy import. ImageClip, AudioFileClip, VideoFileClip
+from moviepy.editor import Imageclip, Audiofileclip, Videofileclip
 import io
 
 # --- CONFIGURATION DU STUDIO ---
