@@ -27,6 +27,12 @@ path_paroles_extraites = "paroles_extraites.mp3"
 if file_to_split:
     st.audio(file_to_split)
     if st.button("🚀 Extraire les paroles maintenant"):
+
+
+
+
+
+        
         with st.spinner("Analyse et extraction..."):
             # Technique d'inversion de phase (légère pour le serveur)
             sound = AudioSegment.from_file(file_to_split)
