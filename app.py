@@ -9,6 +9,12 @@ from pydub import AudioSegment
 
 
 
+try:
+    from moviepy.editor import ImageClip, AudioFileClip, VideoFileClip
+except ImportError:
+    from moviepy.video.VideoClip import ImageClip
+    from moviepy.audio.io.AudioFileClip import AudioFileClip
+    from moviepy.video.io.VideoFileClip import VideoFileClip
 
 
 
