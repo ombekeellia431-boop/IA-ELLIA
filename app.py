@@ -6,18 +6,12 @@ import numpy as np
 from gtts import gTTS
 from music21 import note, stream, tempo, midi
 from pydub import AudioSegment
-
-
-
 try:
     from moviepy.editor import ImageClip, AudioFileClip, VideoFileClip
 except ImportError:
     from moviepy.video.VideoClip import ImageClip
     from moviepy.audio.io.AudioFileClip import AudioFileClip
     from moviepy.video.io.VideoFileClip import VideoFileClip
-
-
-
 import io
 # --- CONFIGURATION DU STUDIO ---
 st.set_page_config(page_title="ELLI-IA Studio Pro", layout="wide")
