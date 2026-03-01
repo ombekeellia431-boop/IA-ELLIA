@@ -111,8 +111,10 @@ if audio_mix_final and media_fond:
                 else:
                     bg = VideoFileClip(p_media).subclip(0, min(VideoFileClip(p_media).duration, audio_clip.duration))
                 
-                txt = TextClip(st.session_state['paroles'], fontsize=taille_police, color=couleur_texte, 
-                               method='caption', size=(bg.w*0.8, None)).set_duration(audio_clip.duration).set_pos('bottom')
+
+
+
+                
                 
                 final_video = CompositeVideoClip([bg, txt]).set_audio(audio_clip)
                 final_video.write_videofile("clip_final.mp4", fps=24, codec="libx264")
