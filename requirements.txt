@@ -6,3 +6,4 @@ pydub
 numpy
 moviepy==1.0.3
 openai-whisper
+ImageMagick
