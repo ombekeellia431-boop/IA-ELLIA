@@ -120,8 +120,8 @@ if audio_mix_final and media_fond:
                     stroke_width=1
                 ).set_duration(audio_clip.duration).set_pos(('center', 'bottom'))
 
-                
-                
+
+        
                 final_video = CompositeVideoClip([bg, txt]).set_audio(audio_clip)
                 final_video.write_videofile("clip_final.mp4", fps=24, codec="libx264")
                 st.video("clip_final.mp4")
