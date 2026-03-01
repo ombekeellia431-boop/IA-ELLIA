@@ -119,9 +119,6 @@ if audio_mix_final and media_fond:
                     stroke_color='black',
                     stroke_width=1
                 ).set_duration(audio_clip.duration).set_pos(('center', 'bottom'))
-
-
-        
                 final_video = CompositeVideoClip([bg, txt]).set_audio(audio_clip)
                 final_video.write_videofile("clip_final.mp4", fps=24, codec="libx264")
                 st.video("clip_final.mp4")
@@ -129,7 +126,6 @@ if audio_mix_final and media_fond:
                     st.download_button("📥 Télécharger Clip (MP4)", vf, "clip_elli_ia.mp4")
             except Exception as e:
                 st.error(f"Erreur : {e}")
-
 # --- 5. NOTATION & PARTAGE ---
 st.divider()
 st.header("🌟 Votre avis & Partage")
