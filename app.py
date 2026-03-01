@@ -109,7 +109,8 @@ if audio_mix_final and media_fond:
                 if media_fond.type.startswith("image"):
                     bg = ImageClip(p_media).set_duration(audio_clip.duration)
                 else:
-                    bg = VideoFileClip(p_media).subclip(0, min(VideoFileClip(p_media).duration,                 txt = TextClip(
+                    bg = VideoFileClip(p_media).subclip(0, min(VideoFileClip(p_media).duration, audio_clip.duration))
+                    txt = TextClip(
                     st.session_state['paroles'], 
                     fontsize=taille_police, 
                     color=couleur_texte, 
@@ -117,8 +118,10 @@ if audio_mix_final and media_fond:
                     method='caption', 
                     size=(bg.w * 0.9, None),
                     stroke_color='black',
-                    stroke_width=1
-                ).set_duration(audio_clip.duration).set_pos(('center', 'bottom'))
+                    stroke_width=1)
+                        
+        .set_duration(audio_clip.duration).set_pos(('center', 'bottom'))
+                                                               
                 final_video = CompositeVideoClip([bg, txt]).set_audio(audio_clip)
                 final_video.write_videofile("clip_final.mp4", fps=24, codec="libx264")
                 st.video("clip_final.mp4")
