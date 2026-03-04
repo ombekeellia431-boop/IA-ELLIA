@@ -6,3 +6,5 @@ pydub
 numpy
 moviepy==1.0.3
 librosa
+scipy
+streamlit-audiorec
